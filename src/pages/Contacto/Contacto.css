@@ -1,0 +1,93 @@
+/* App.css */
+
+/* Estilos para Contacto page */
+.contacto {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 2rem;
+}
+
+.contacto h1 {
+    font-size: 2.5rem;
+    margin-bottom: 1rem;
+}
+
+.contacto p {
+    margin-bottom: 2rem;
+}
+
+.contacto form {
+    display: flex;
+    flex-direction: column;
+}
+
+.contacto .form-group {
+    margin-bottom: 1.5rem;
+}
+
+.contacto label {
+    font-weight: bold;
+}
+
+.contacto input,
+.contacto textarea {
+    width: 100%;
+    padding: 0.5rem;
+    font-size: 1rem;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+}
+
+.contacto textarea {
+    resize: vertical;
+}
+
+.contacto button {
+    background-color: #646cff;
+    color: white;
+    border: none;
+    padding: 0.75rem 1rem;
+    font-size: 1rem;
+    cursor: pointer;
+    border-radius: 4px;
+}
+
+.contacto .modal {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.contacto .modal-content {
+    background-color: white;
+    padding: 2rem;
+    border-radius: 8px;
+    text-align: center;
+}
+
+.contacto .modal h2 {
+    font-size: 1.5rem;
+    margin-bottom: 1rem;
+}
+
+.contacto .modal p {
+    margin-bottom: 2rem;
+}
+
+.contacto .modal-buttons {
+    display: flex;
+    justify-content: center;
+}
+
+.contacto .modal-buttons button {
+    margin: 0 1rem;
+    padding: 0.75rem 1rem;
+    border-radius: 4px;
+    cursor: pointer;
+}

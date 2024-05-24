@@ -1,0 +1,169 @@
+/* App.css */
+
+#root {
+  max-width: 1280px;
+  margin: 0 auto;
+  padding: 2rem;
+}
+
+/* Header styles */
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem 2rem;
+  background-color: #f8f8f8;
+  border-bottom: 1px solid #e7e7e7;
+  position: fixed;
+  width: 100%;
+  top: 0;
+  left: 0;
+  z-index: 1000;
+  box-sizing: border-box;
+}
+
+.logo {
+  font-size: 1.5rem;
+  font-weight: bold;
+}
+
+.nav {
+  display: flex;
+}
+
+.nav ul {
+  list-style: none;
+  display: flex;
+  margin: 0;
+  padding: 0;
+}
+
+.nav ul li {
+  margin: 0 1rem;
+}
+
+.nav a {
+  text-decoration: none;
+  color: #646cff;
+  font-weight: bold;
+}
+
+.nav a:hover {
+  text-decoration: underline;
+}
+
+.burger {
+  display: none;
+  flex-direction: column;
+  justify-content: space-around;
+  width: 2rem;
+  height: 2rem;
+  background: transparent;
+  border: none;
+  cursor: pointer;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.burger-line {
+  width: 2rem;
+  height: 0.25rem;
+  background: #646cff;
+  border-radius: 10px;
+  transition: all 0.3s linear;
+  position: relative;
+  transform-origin: 1px;
+}
+
+/* App.css */
+
+/* Estilos para Home page */
+.home {
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 2rem;
+}
+
+.home h1 {
+  font-size: 2.5rem;
+  margin-bottom: 1rem;
+}
+
+.home .subtitle {
+  font-size: 1.5rem;
+  color: #646cff;
+  margin-bottom: 1.5rem;
+}
+
+.home .project-image {
+  width: 100%;
+  max-width: 600px;
+  border-radius: 8px;
+  margin-bottom: 1.5rem;
+}
+
+.home .content {
+  line-height: 1.6;
+}
+
+.home .content p {
+  margin-bottom: 1rem;
+}
+
+.home .content ul {
+  list-style-type: disc;
+  padding-left: 2rem;
+}
+
+/* Responsive styles */
+@media (max-width: 768px) {
+  .nav {
+    position: absolute;
+    top: 60px;
+    right: 0;
+    height: calc(100vh - 60px);
+    width: 100%;
+    background-color: #f8f8f8;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    transform: translateX(100%);
+    transition: transform 0.3s ease-in-out;
+    box-sizing: border-box;
+  }
+
+  .nav.open {
+    transform: translateX(0);
+  }
+
+  .nav ul {
+    flex-direction: column;
+  }
+
+  .nav ul li {
+    margin: 1rem 0;
+  }
+
+  .burger {
+    display: flex;
+  }
+
+  .burger-line:nth-child(1) {
+    transform: ${({ isMenuOpen }) => isMenuOpen ? 'rotate(45deg)' : 'rotate(0)'};
+}
+
+.burger-line:nth-child(2) {
+  opacity: ${({ isMenuOpen }) => isMenuOpen ? '0' : '1'};
+transform: ${({ isMenuOpen }) => isMenuOpen ? 'translateX(20px)' : 'translateX(0)'};
+}
+
+.burger-line:nth-child(3) {
+  transform: ${({ isMenuOpen }) => isMenuOpen ? 'rotate(-45deg)' : 'rotate(0)'};
+}
+}
+
+/* Adjust content to avoid overlapping with header */
+.content {
+  margin-top: 80px;
+  padding: 1rem;
+}
