@@ -95,11 +95,17 @@
   margin-bottom: 1.5rem;
 }
 
+.home .image-container {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 2rem;
+}
+
 .home .project-image {
-  width: 100%;
-  max-width: 600px;
+  width: 100px;
+  height: auto;
   border-radius: 8px;
-  margin-bottom: 1.5rem;
+  margin-bottom: 1rem;
 }
 
 .home .content {
